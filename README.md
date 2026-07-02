@@ -1,6 +1,6 @@
-# Aerowash — Website
+# Second Home Car Wash — Website
 
-A pixel-faithful copy of the Rapid Car Spa website, fully rebranded as **Aerowash**.
+A pixel-faithful copy of the Rapid Car Spa website, fully rebranded as **Second Home Car Wash**.
 Same layout, sections, alignment, styling and content — only the branding has been changed.
 This is the **complete multi-page site**, not just the homepage.
 
@@ -39,14 +39,14 @@ no JavaScript console errors.
 
 ## What was changed from the original
 
-- **Brand name** — every visible "Rapid Car Spa" → "Aerowash" across all pages (titles, meta,
+- **Brand name** — every visible "Rapid Car Spa" → "Second Home Car Wash" across all pages (titles, meta,
   headings, alt text, social handles).
 - **Logo** — the teal "RAPID / CAR SPA" logo recreated as an "AERO / WASH" mark in the same
-  style. Source is `aerowash-logo.svg`, rasterised into the original logo + favicon files.
+  style. Source is `secondhomecarwash-logo.svg`, rasterised into the original logo + favicon files.
 - **Domain** — all `` links made local/root-relative.
 - **Emails** — the site used Cloudflare email-obfuscation whose decoder was server-side only.
   A local replacement (`cdn-cgi/scripts/.../email-decode.min.js`) decodes them **and** rebrands
-  them, so addresses show as `info@aerowash.com` / `aerowash3@gmail.com` instead of
+  them, so addresses show as `info@secondhomecarwash.com` / `secondhomecarwash3@gmail.com` instead of
   "[email protected]".
 - **Broken upstream image** — the news slider referenced a deleted screenshot (404 on the
   original site too); replaced with the existing car-wash banner so nothing is broken.
@@ -59,10 +59,10 @@ no JavaScript console errors.
 | Item | Where |
 |---|---|
 | Phone `+91 90366 65665` | search `919036665665` |
-| Email placeholders (`info@aerowash.com`, `aerowash3@gmail.com`) | set the real address in `cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js` (the `rebrand` map) |
+| Email placeholders (`info@secondhomecarwash.com`, `secondhomecarwash3@gmail.com`) | set the real address in `cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js` (the `rebrand` map) |
 | Address (LBS Nagar, Kaggadasapura, Hyderabad) | search `Kaggadasapura` |
 | Google Maps embed (old location) | the `<iframe>` in the contact section |
-| Social links (now `…/aerowash`) | facebook / instagram / pinterest / x links |
+| Social links (now `…/secondhomecarwash`) | facebook / instagram / pinterest / x links |
 | Contact / booking form | currently posts to the old WordPress `admin-ajax.php`; wire it to the client's email or a form service |
 | Prices, hours | pricing + footer sections, if they differ |
 
