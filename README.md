@@ -58,7 +58,7 @@ no JavaScript console errors.
 
 | Item | Where |
 |---|---|
-| Phone `+91 90366 65665` | search `919036665665` |
+| Phone `+91 8801939500` | search `918801939500` |
 | Email placeholders (`info@secondhomecarwash.com`, `secondhomecarwash3@gmail.com`) | set the real address in `cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js` (the `rebrand` map) |
 | Address (LBS Nagar, Kaggadasapura, Hyderabad) | search `Kaggadasapura` |
 | Google Maps embed (old location) | the `<iframe>` in the contact section |
