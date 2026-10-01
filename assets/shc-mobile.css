@@ -1,0 +1,63 @@
+/* Phones: replace the tall floating Enquire / WhatsApp / Call bar with two small round buttons
+   at the bottom-right so it no longer covers text on the right edge. */
+@media (max-width: 767px) {
+    .mystickyelements-fixed.mystickyelements-position-right {
+        top: auto !important;
+        bottom: 16px !important;
+        right: 12px !important;
+        left: auto !important;
+        transform: none !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    .mystickyelements-fixed .mystickyelement-lists-wrap,
+    .mystickyelements-fixed ul.mystickyelements-lists {
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+    .mystickyelements-fixed li.mystickyelements-minimize,
+    .mystickyelements-fixed li.mystickyelements-contact-form {
+        display: none !important;
+    }
+    .mystickyelements-fixed li.mystickyelements-social-icon-li {
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 0 10px !important;
+        border-radius: 50% !important;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+        transform: none !important;
+    }
+    .mystickyelements-fixed li.mystickyelements-social-icon-li:last-child { margin-bottom: 0 !important; }
+    .mystickyelements-fixed li.mystickyelements-social-icon-li .mystickyelements-social-icon {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .mystickyelements-fixed li.mystickyelements-social-icon-li .mystickyelements-social-text { display: none !important; }
+}
+
+/* Very small phones: let long links (the footer email address) wrap instead of overflowing the screen. */
+@media (max-width: 480px) {
+    body .et-l--footer .et_pb_module a,
+    .et-l--footer a,
+    .et-l--footer span,
+    .et-l--footer p,
+    a[href^="mailto:"],
+    a[href^="mailto:"] * {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}

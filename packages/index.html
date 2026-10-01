@@ -183,6 +183,14 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 <style id="secondhomecarwash-pricing-overrides">
 /* Override backgrounds and paddings for all pricing columns on packages page */
 
+/* Heading spacing: Divi's -41px bottom margin pulled the first pricing row into the H1 */
+.et_pb_text_0 { margin-bottom: 8px !important; }
+.et_pb_text_1 { margin-bottom: 0 !important; }
+.et_pb_text_1 h1 { padding-bottom: 0 !important; }
+
+/* Info section: Divi gave it left-only padding, which pushed it off-centre at every width */
+.et_pb_section_1.et_pb_section { padding-left: 0 !important; padding-right: 0 !important; }
+
 /* Vehicle pricing row layout - centered 2-column flex */
 #Hatchback, #Sedan, #Midsuv, #SUV, #Conv, #Luxury {
     display: flex !important;
@@ -200,7 +208,47 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
     margin-bottom: 0 !important;
 }
 
-@media (max-width: 768px) {
+/* Pin the Book Now button to the bottom of each card so paired cards line up */
+#Hatchback .et_pb_column, #Sedan .et_pb_column, #Midsuv .et_pb_column,
+#SUV .et_pb_column, #Conv .et_pb_column, #Luxury .et_pb_column {
+    display: flex !important;
+    flex-direction: column !important;
+}
+#Hatchback .et_pb_button_module_wrapper, #Sedan .et_pb_button_module_wrapper, #Midsuv .et_pb_button_module_wrapper,
+#SUV .et_pb_button_module_wrapper, #Conv .et_pb_button_module_wrapper, #Luxury .et_pb_button_module_wrapper {
+    margin-top: auto !important;
+    padding-top: 16px;
+}
+#Hatchback .et_pb_button_module_wrapper .et_pb_button, #Sedan .et_pb_button_module_wrapper .et_pb_button, #Midsuv .et_pb_button_module_wrapper .et_pb_button,
+#SUV .et_pb_button_module_wrapper .et_pb_button, #Conv .et_pb_button_module_wrapper .et_pb_button, #Luxury .et_pb_button_module_wrapper .et_pb_button {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+/* Tablet and below: centre the rows and drop Divi's left/right offsets */
+@media (max-width: 980px) {
+    .entry-content .et_pb_section.et_pb_section { padding-left: 0 !important; padding-right: 0 !important; }
+    .entry-content .et_pb_row.et_pb_row { margin-left: auto !important; margin-right: auto !important; }
+    #Hatchback.et_pb_row, #Sedan.et_pb_row, #Midsuv.et_pb_row,
+    #SUV.et_pb_row, #Conv.et_pb_row, #Luxury.et_pb_row,
+    .et_pb_row_0.et_pb_row {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important;
+    }
+    .et_pb_text_0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .et_pb_text_1 {
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Phones: stack the plan cards in a single column */
+@media (max-width: 699px) {
+    .entry-content .et_pb_row.et_pb_row { width: 90% !important; }
     #Hatchback, #Sedan, #Midsuv, #SUV, #Conv, #Luxury {
         flex-direction: column !important;
         align-items: center !important;
@@ -210,6 +258,33 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
     #SUV .et_pb_column, #Conv .et_pb_column, #Luxury .et_pb_column {
         width: 100% !important;
         max-width: 400px !important;
+        flex: 0 0 auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+    #Hatchback.et_pb_row, #Sedan.et_pb_row, #Midsuv.et_pb_row,
+    #SUV.et_pb_row, #Conv.et_pb_row, #Luxury.et_pb_row {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important;
+    }
+    .et_pb_row_0.et_pb_row {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important;
+    }
+    .et_pb_text_0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .et_pb_text_1 {
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .et_pb_text_1 h1 {
+        font-size: 24px !important;
+        overflow-wrap: break-word !important;
     }
 }
 
@@ -249,6 +324,8 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
     white-space: normal !important;
 }
 </style>
+<link rel="stylesheet" href="/assets/shc-reviews.css" />
+<link rel="stylesheet" href="/assets/shc-mobile.css" />
 </head>
 <body data-rsssl=1 class="page-template-default page page-id-2038 et-tb-has-template et-tb-has-header et-tb-has-footer et_pb_button_helper_class et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
 				<button type="button"  aria-controls="rmp-container-2307" aria-label="Menu Trigger" id="rmp_menu_trigger-2307"  class="rmp_menu_trigger rmp-menu-trigger-boring">
@@ -1227,7 +1304,55 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div>
 				
 				
-			</div>		</div>
+			</div>		
+			<div class="et_pb_section secondhome-reviews-section secondhome-reviews-section--page">
+			  <div class="container">
+				<div class="reviews-header">
+				  <h2>WHAT OUR CUSTOMERS SAY</h2>
+				  <p>Hear from car owners who trust Second Home Car Wash for their daily cleaning needs.</p>
+				</div>
+				<div class="reviews-grid reviews-grid--3">
+				  <div class="review-card">
+				  					<div class="review-stars">★★★★★</div>
+				  					<p class="review-text">"Subscribed for the daily plan six months ago and never looked back. The subscription is affordable, the staff is trustworthy, and my car has never looked better. Best decision for busy professionals."</p>
+				  					<div class="review-author">
+				  					  <div class="author-avatar">MS</div>
+				  					  <div class="author-info">
+				  						<h4>Mohammed Saleem</h4>
+				  						<span>Tolichowki, Hyderabad</span>
+				  					  </div>
+				  					</div>
+				  				  </div>
+				  <div class="review-card">
+				  					<div class="review-stars">★★★★★</div>
+				  					<p class="review-text">"I was skeptical about waterless washing at first, but their daily subscription is amazing. They are extremely punctual (they wash early morning!) and the gloss is incredible. Highly recommended!"</p>
+				  					<div class="review-author">
+				  					  <div class="author-avatar">SR</div>
+				  					  <div class="author-info">
+				  						<h4>Sneha Reddy</h4>
+				  						<span>Jubilee Hills, Hyderabad</span>
+				  					  </div>
+				  					</div>
+				  				  </div>
+				  <div class="review-card">
+				  					<div class="review-stars">★★★★★</div>
+				  					<p class="review-text">"Excellent doorstep service. I subscribed for my sedan and hatchback. The scheduling is very convenient, and the booking process via WhatsApp is seamless. Truly a 5-star experience."</p>
+				  					<div class="review-author">
+				  					  <div class="author-avatar">VM</div>
+				  					  <div class="author-info">
+				  						<h4>Vikram Malhotra</h4>
+				  						<span>Gachibowli, Hyderabad</span>
+				  					  </div>
+				  					</div>
+				  				  </div>
+				</div>
+				<div class="reviews-cta">
+				  <p>Ready for a spotless car every morning?</p>
+				  <a href="https://wa.me/918801939500" target="_blank" rel="noopener">Subscribe on WhatsApp</a>
+				</div>
+			  </div>
+			</div>
+</div>
 	</div>
 						</div>
 

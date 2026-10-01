@@ -1,0 +1,131 @@
+/* Reviews Section Styles */
+.secondhome-reviews-section {
+    background-color: #0b132b;
+    padding: 80px 24px;
+    color: #fff;
+}
+.reviews-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.reviews-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #00D4FF !important;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.reviews-header p {
+    font-size: 16px;
+    color: #b3b3b3;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+.review-stars {
+    color: #FFB300;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.author-avatar {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #00D4FF 0%, #0072FF 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+}
+.author-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff !important;
+    margin: 0 0 4px 0;
+}
+.author-info span {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+/* Call-to-action under the reviews */
+.reviews-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+.reviews-cta p {
+    color: #b3b3b3;
+    margin: 0 0 16px;
+}
+.reviews-cta a {
+    display: inline-block;
+    background: #25D366;
+    color: #fff !important;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, .35);
+    transition: transform .2s ease, background .2s ease;
+}
+.reviews-cta a:hover {
+    background: #1fb958;
+    transform: translateY(-2px);
+}
+
+/* Tablet: two cards across. Phones: one column, tighter padding. */
+@media (max-width: 980px) {
+    .secondhome-reviews-section { padding: 50px 16px !important; }
+    .secondhome-reviews-section .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+    .secondhome-reviews-section .reviews-grid { grid-template-columns: 1fr !important; }
+    .secondhome-reviews-section .review-card { padding: 22px !important; min-width: 0; }
+}
+@media (min-width: 700px) and (max-width: 980px) {
+    .secondhome-reviews-section .reviews-grid.reviews-grid--3 { grid-template-columns: 1fr !important; }
+    .secondhome-reviews-section .reviews-grid:not(.reviews-grid--3) { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (min-width: 981px) {
+    .secondhome-reviews-section .reviews-grid.reviews-grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
