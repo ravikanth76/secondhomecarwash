@@ -183,6 +183,36 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 <style id="secondhomecarwash-pricing-overrides">
 /* Override backgrounds and paddings for all pricing columns on packages page */
 
+/* Vehicle pricing row layout - centered 2-column flex */
+#Hatchback, #Sedan, #Midsuv, #SUV, #Conv, #Luxury {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    max-width: 900px !important;
+    margin: 0 auto 50px auto !important;
+}
+
+#Hatchback .et_pb_column, #Sedan .et_pb_column, #Midsuv .et_pb_column,
+#SUV .et_pb_column, #Conv .et_pb_column, #Luxury .et_pb_column {
+    flex: 1 1 0 !important;
+    max-width: 420px !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    #Hatchback, #Sedan, #Midsuv, #SUV, #Conv, #Luxury {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+    }
+    #Hatchback .et_pb_column, #Sedan .et_pb_column, #Midsuv .et_pb_column,
+    #SUV .et_pb_column, #Conv .et_pb_column, #Luxury .et_pb_column {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+}
+
 /* Alternate Plan columns (Columns 1, 4, 7, 10, 13, 16) - Deep Premium Teal */
 .et_pb_column_1, .et_pb_column_4, .et_pb_column_7, .et_pb_column_10, .et_pb_column_13, .et_pb_column_16 {
     background-image: none !important;
@@ -197,20 +227,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
     background: linear-gradient(135deg, #0f7a59 0%, #07412e 100%) !important;
 }
 
-/* At your Service columns (Columns 3, 6, 9, 12, 15, 18) - Deep Premium Navy Blue */
-.et_pb_column_3, .et_pb_column_6, .et_pb_column_9, .et_pb_column_12, .et_pb_column_15, .et_pb_column_18 {
-    background-image: none !important;
-    background-color: #16365f !important;
-    background: linear-gradient(135deg, #1b4578 0%, #0e2747 100%) !important;
-}
-
-/* Reduce horizontal padding to allow text to fit nicely, and reset word-break behavior */
-.et_pb_column_1, .et_pb_column_2, .et_pb_column_3,
-.et_pb_column_4, .et_pb_column_5, .et_pb_column_6,
-.et_pb_column_7, .et_pb_column_8, .et_pb_column_9,
-.et_pb_column_10, .et_pb_column_11, .et_pb_column_12,
-.et_pb_column_13, .et_pb_column_14, .et_pb_column_15,
-.et_pb_column_16, .et_pb_column_17, .et_pb_column_18 {
+/* Horizontal padding to allow text to fit nicely, and reset word-break behavior */
+.et_pb_column_1, .et_pb_column_2,
+.et_pb_column_4, .et_pb_column_5,
+.et_pb_column_7, .et_pb_column_8,
+.et_pb_column_10, .et_pb_column_11,
+.et_pb_column_13, .et_pb_column_14,
+.et_pb_column_16, .et_pb_column_17 {
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
@@ -219,9 +242,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 .et_pb_column_1 h2, .et_pb_column_4 h2, .et_pb_column_7 h2, .et_pb_column_10 h2, .et_pb_column_13 h2, .et_pb_column_16 h2,
 .et_pb_column_1 p, .et_pb_column_4 p, .et_pb_column_7 p, .et_pb_column_10 p, .et_pb_column_13 p, .et_pb_column_16 p,
 .et_pb_column_2 h2, .et_pb_column_5 h2, .et_pb_column_8 h2, .et_pb_column_11 h2, .et_pb_column_14 h2, .et_pb_column_17 h2,
-.et_pb_column_2 p, .et_pb_column_5 p, .et_pb_column_8 p, .et_pb_column_11 p, .et_pb_column_14 p, .et_pb_column_17 p,
-.et_pb_column_3 h2, .et_pb_column_6 h2, .et_pb_column_9 h2, .et_pb_column_12 h2, .et_pb_column_15 h2, .et_pb_column_18 h2,
-.et_pb_column_3 p, .et_pb_column_6 p, .et_pb_column_9 p, .et_pb_column_12 p, .et_pb_column_15 p, .et_pb_column_18 p {
+.et_pb_column_2 p, .et_pb_column_5 p, .et_pb_column_8 p, .et_pb_column_11 p, .et_pb_column_14 p, .et_pb_column_17 p {
     word-break: keep-all !important;
     word-wrap: normal !important;
     overflow-wrap: normal !important;
@@ -358,7 +379,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 			</div><div id="Hatchback" class="et_pb_row et_pb_row_1">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_1  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_1  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -375,7 +396,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1035</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 900</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -417,7 +438,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -434,7 +455,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1329</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1150</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -476,72 +497,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>HATCHBACK</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 295</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_20  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_22  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_24  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
 			</div>
 				
 				
 				
 				
 			</div><div id="Sedan" class="et_pb_row et_pb_row_2">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -558,7 +520,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1153</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1000</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_28  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -600,7 +562,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -617,7 +579,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1447</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1250</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_36  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -659,72 +621,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_4_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_4 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_42  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>SEDAN</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_43  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 354</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_44  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_5 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_45  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_46  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_47  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_48  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_49  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_5_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_5 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
 			</div>
 				
 				
 				
 				
 			</div><div id="Midsuv" class="et_pb_row et_pb_row_3">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -741,7 +644,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1271</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1100</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_52  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -783,7 +686,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_6_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_6 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -800,7 +703,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1565</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1350</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_60  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -842,72 +745,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_7_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_7 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_66  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>MID-SUVs</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_67  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 413</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_68  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_8 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_69  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_70  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_71  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_72  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_73  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_8_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_8 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
 			</div>
 				
 				
 				
 				
 			</div><div id="SUV" class="et_pb_row et_pb_row_4">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -924,7 +768,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1389</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1200</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_76  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -966,7 +810,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_9_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_9 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_11  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -983,7 +827,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1683</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1450</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_84  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -1025,72 +869,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_10_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_10 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_90  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>SUVs</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_91  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 472</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_92  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_11 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_93  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_94  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_95  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_96  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_97  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_11_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_11 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
 			</div>
 				
 				
 				
 				
 			</div><div id="Conv" class="et_pb_row et_pb_row_5">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -1107,7 +892,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1507</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1300</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_100  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -1149,7 +934,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_12_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_12 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_14  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -1166,7 +951,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1800</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1550</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_108  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -1208,72 +993,13 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_13_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_13 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_114  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>Convertibles</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_115  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 531</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_116  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_14 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_117  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_118  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_119  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_120  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_121  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_14_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_14 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
 			</div>
 				
 				
 				
 				
 			</div><div id="Luxury" class="et_pb_row et_pb_row_6">
-				<div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_16  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_16  et_pb_css_mix_blend_mode_passthrough">
 				
 				
 				
@@ -1290,7 +1016,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1625</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1400</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_124  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -1332,7 +1058,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 			</div><div class="et_pb_button_module_wrapper et_pb_button_15_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_15 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_with_border et_pb_column_1_2 et_pb_column et_pb_column_17  et_pb_css_mix_blend_mode_passthrough et-last-child">
 				
 				
 				
@@ -1349,15 +1075,15 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><h3>INR. 1919</h3></div>
+				<div class="et_pb_text_inner"><h3>INR. 1650</h3></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_132  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
 				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">24 days exterior cleaning </span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">4 weekly  interior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
+				<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">4 weekly  interior cleaning.</span></p>
+				<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
 			</div><div class="et_pb_module et_pb_divider et_pb_divider_16 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_133  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -1390,65 +1116,6 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_16_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_16 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
-			</div>
-			</div><div class="et_pb_with_border et_pb_column_1_3 et_pb_column et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
-				
-				
-				
-				
-				<div class="et_pb_module et_pb_text et_pb_text_138  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h2>Luxury</h2>
-<p>At your Service    (one-time wash)</p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_139  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><h3>INR. 590</h3></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_140  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 day (On demand)</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior &amp; exterior cleaning.</span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
-			</div><div class="et_pb_module et_pb_divider et_pb_divider_17 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_141  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Door Step waterless cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_142  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine interior &amp; exterior cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_143  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Wheel Arch cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_144  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Pannels cleaning.</span></p></div>
-			</div><div class="et_pb_module et_pb_text et_pb_text_145  et_pb_text_align_center et_pb_bg_layout_light">
-				
-				
-				
-				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
-			</div><div class="et_pb_button_module_wrapper et_pb_button_17_wrapper et_pb_button_alignment_center et_pb_module ">
-				<a class="et_pb_button et_pb_button_17 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
 			</div>
 				
@@ -1509,7 +1176,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				<h4 class="et_pb_toggle_title">Is there a minimum customer requirement for your services?</h4>
-				<div class="et_pb_toggle_content clearfix"><p>For one-time services, no minimum is required. However, for daily or alternate-day monthly subscription plans, a minimum of 30 customers from the same apartment complex is needed.</p></div>
+				<div class="et_pb_toggle_content clearfix"><p>For our daily or alternate-day monthly subscription plans, a minimum of 30 customers from the same apartment complex is needed.</p></div>
 			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_3 et_pb_toggle_item  et_pb_toggle_close">
 				
 				
