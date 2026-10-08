@@ -288,6 +288,106 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
     }
 }
 
+/* Price block: Daily cards carried a stray -10px top margin from Divi */
+#Hatchback .et_pb_column > .et_pb_text:nth-child(2),
+#Sedan .et_pb_column > .et_pb_text:nth-child(2),
+#Midsuv .et_pb_column > .et_pb_text:nth-child(2),
+#SUV .et_pb_column > .et_pb_text:nth-child(2),
+#Conv .et_pb_column > .et_pb_text:nth-child(2),
+#Luxury .et_pb_column > .et_pb_text:nth-child(2) {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+/* First feature line after the divider: same offset on every card */
+#Hatchback .et_pb_column > .et_pb_divider + .et_pb_text,
+#Sedan .et_pb_column > .et_pb_divider + .et_pb_text,
+#Midsuv .et_pb_column > .et_pb_divider + .et_pb_text,
+#SUV .et_pb_column > .et_pb_divider + .et_pb_text,
+#Conv .et_pb_column > .et_pb_divider + .et_pb_text,
+#Luxury .et_pb_column > .et_pb_divider + .et_pb_text {
+    margin-top: -16px !important;
+}
+
+/* Plan card typography: Divi's per-module CSS made Alternate and Daily cards differ
+   (grey feature text, mixed weights, 10px offset), so normalise every card to one style */
+#Hatchback .et_pb_column .et_pb_text:nth-of-type(1) h2,
+#Sedan .et_pb_column .et_pb_text:nth-of-type(1) h2,
+#Midsuv .et_pb_column .et_pb_text:nth-of-type(1) h2,
+#SUV .et_pb_column .et_pb_text:nth-of-type(1) h2,
+#Conv .et_pb_column .et_pb_text:nth-of-type(1) h2,
+#Luxury .et_pb_column .et_pb_text:nth-of-type(1) h2 {
+    font-weight: 700 !important;
+}
+#Hatchback .et_pb_column .et_pb_text:nth-of-type(1),
+#Sedan .et_pb_column .et_pb_text:nth-of-type(1),
+#Midsuv .et_pb_column .et_pb_text:nth-of-type(1),
+#SUV .et_pb_column .et_pb_text:nth-of-type(1),
+#Conv .et_pb_column .et_pb_text:nth-of-type(1),
+#Luxury .et_pb_column .et_pb_text:nth-of-type(1) {
+    margin-bottom: 21px !important;
+}
+#Hatchback .et_pb_column .et_pb_text_inner h2,
+#Sedan .et_pb_column .et_pb_text_inner h2,
+#Midsuv .et_pb_column .et_pb_text_inner h2,
+#SUV .et_pb_column .et_pb_text_inner h2,
+#Conv .et_pb_column .et_pb_text_inner h2,
+#Luxury .et_pb_column .et_pb_text_inner h2 {
+    font-weight: 700 !important;
+    margin: 0 !important;
+    padding: 0 0 8px !important;
+    line-height: 1.2em !important;
+}
+#Hatchback .et_pb_column .et_pb_text_inner h3,
+#Sedan .et_pb_column .et_pb_text_inner h3,
+#Midsuv .et_pb_column .et_pb_text_inner h3,
+#SUV .et_pb_column .et_pb_text_inner h3,
+#Conv .et_pb_column .et_pb_text_inner h3,
+#Luxury .et_pb_column .et_pb_text_inner h3 {
+    font-weight: 500 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4em !important;
+}
+#Hatchback .et_pb_column .et_pb_text_inner p,
+#Sedan .et_pb_column .et_pb_text_inner p,
+#Midsuv .et_pb_column .et_pb_text_inner p,
+#SUV .et_pb_column .et_pb_text_inner p,
+#Conv .et_pb_column .et_pb_text_inner p,
+#Luxury .et_pb_column .et_pb_text_inner p {
+    margin: 0 !important;
+    padding: 0 0 10px !important;
+    line-height: 1.5em !important;
+}
+#Hatchback .et_pb_column .et_pb_text_inner p:last-child,
+#Sedan .et_pb_column .et_pb_text_inner p:last-child,
+#Midsuv .et_pb_column .et_pb_text_inner p:last-child,
+#SUV .et_pb_column .et_pb_text_inner p:last-child,
+#Conv .et_pb_column .et_pb_text_inner p:last-child,
+#Luxury .et_pb_column .et_pb_text_inner p:last-child {
+    padding-bottom: 0 !important;
+}
+#Hatchback .et_pb_column .et_pb_text_inner p span,
+#Sedan .et_pb_column .et_pb_text_inner p span,
+#Midsuv .et_pb_column .et_pb_text_inner p span,
+#SUV .et_pb_column .et_pb_text_inner p span,
+#Conv .et_pb_column .et_pb_text_inner p span,
+#Luxury .et_pb_column .et_pb_text_inner p span {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-shadow: 1.12px 1.12px 1.12px rgba(0, 0, 0, 0.4) !important;
+}
+#Hatchback .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span,
+#Sedan .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span,
+#Midsuv .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span,
+#SUV .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span,
+#Conv .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span,
+#Luxury .et_pb_column .et_pb_text:nth-of-type(3) .et_pb_text_inner p span {
+    font-size: 17px !important;
+    text-shadow: 1.36px 1.36px 1.36px rgba(0, 0, 0, 0.4) !important;
+}
+
 /* Alternate Plan columns (Columns 1, 4, 7, 10, 13, 16) - Deep Premium Teal */
 .et_pb_column_1, .et_pb_column_4, .et_pb_column_7, .et_pb_column_10, .et_pb_column_13, .et_pb_column_16 {
     background-image: none !important;
@@ -499,19 +599,19 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
@@ -623,19 +723,19 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_32  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_33  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
@@ -747,19 +847,19 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_56  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_57  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_6_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_6 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
@@ -852,7 +952,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">12 days exterior cleaning </span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">2 alt week interior cleaning.</span></p>
+<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 alt week interior cleaning.</span></p>
 <p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
 			</div><div class="et_pb_module et_pb_divider et_pb_divider_9 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_77  et_pb_text_align_center et_pb_bg_layout_light">
 				
@@ -865,25 +965,25 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Interior 2 times)</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">1 interior cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_79  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_80  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_81  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_9_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_9 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
@@ -911,7 +1011,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				<div class="et_pb_text_inner"><p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">24 days exterior cleaning </span></p>
-<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">4 weekly  interior cleaning.</span></p>
+<p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">2 weekly interior cleaning.</span></p>
 <p class="cvGsUA align-center para-style-body direction-ltr"><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">(Tuesday week off)</span></p></div>
 			</div><div class="et_pb_module et_pb_divider et_pb_divider_10 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_85  et_pb_text_align_center et_pb_bg_layout_light">
 				
@@ -924,7 +1024,7 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Interior 4 times.</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Interior 2 times.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_87  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
@@ -995,19 +1095,19 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_104  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_105  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_12_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_12 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
@@ -1119,19 +1219,19 @@ div.et_pb_section.et_pb_section_0_tb_header{background-image:none!important;back
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside Cleaning</span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Fine inside cleaning.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_128  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Hood &amp; petrol lid.</span></p></div>
 			</div><div class="et_pb_module et_pb_text et_pb_text_129  et_pb_text_align_center et_pb_bg_layout_light">
 				
 				
 				
 				
-				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine </span></p></div>
+				<div class="et_pb_text_inner"><p><span class="OYPEnA font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none">Tyre Shine.</span></p></div>
 			</div><div class="et_pb_button_module_wrapper et_pb_button_15_wrapper et_pb_button_alignment_center et_pb_module ">
 				<a class="et_pb_button et_pb_button_15 et_pb_bg_layout_light" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." target="_blank" rel="noopener">Book now</a>
 			</div>
