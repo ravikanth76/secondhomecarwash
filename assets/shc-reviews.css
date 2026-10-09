@@ -111,7 +111,8 @@
 
 /* Tablet: two cards across. Phones: one column, tighter padding. */
 @media (max-width: 980px) {
-    .secondhome-reviews-section { padding: 50px 16px !important; }
+    .secondhome-reviews-section,
+    .entry-content .et_pb_section.secondhome-reviews-section { padding: 50px 16px !important; }
     .secondhome-reviews-section .container {
         width: 100% !important;
         max-width: 100% !important;
