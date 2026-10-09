@@ -1,0 +1,71 @@
+/* Second Home Car Wash - site-wide fixes shared by every page */
+
+/* ---- Footer text ----
+   Divi only shipped the footer module styles with some pages, so on a few blog
+   posts the footer text fell back to small grey text on the teal background. */
+.et_pb_text_0_tb_footer.et_pb_text, .et_pb_text_1_tb_footer.et_pb_text, .et_pb_text_2_tb_footer.et_pb_text,
+.et_pb_text_3_tb_footer.et_pb_text, .et_pb_text_4_tb_footer.et_pb_text, .et_pb_text_5_tb_footer.et_pb_text {
+    color: #ffffff !important;
+}
+.et_pb_text_0_tb_footer, .et_pb_text_1_tb_footer, .et_pb_text_2_tb_footer,
+.et_pb_text_3_tb_footer, .et_pb_text_4_tb_footer, .et_pb_text_5_tb_footer {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    text-shadow: 0.08em 0.08em 0.08em #000000;
+}
+.et_pb_text_0_tb_footer { font-weight: 700; font-size: 20px; }
+.et_pb_text_1_tb_footer { font-weight: 700; font-size: 16px; }
+.et_pb_text_2_tb_footer { font-weight: 700; font-size: 18px; }
+.et_pb_text_3_tb_footer, .et_pb_text_4_tb_footer { font-size: 15px; }
+.et_pb_text_5_tb_footer { font-weight: 700; font-size: 20px; }
+.et_pb_text_2_tb_footer a { white-space: nowrap; }
+
+/* Email / phone links were Divi's default blue on teal - barely readable */
+footer.et-l--footer .et_pb_text a,
+footer.et-l--footer .et_pb_text a:visited {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+footer.et-l--footer .et_pb_text a:hover { color: #d9f6ff !important; }
+
+/* ---- Footer map ----
+   The embed was hard-coded to 100x100 inside a white box a third of the column wide. */
+.et_pb_code_0_tb_footer {
+    width: 100% !important;
+    max-width: 320px !important;
+    background: transparent !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+.et_pb_code_0_tb_footer iframe {
+    display: block;
+    width: 100% !important;
+    height: 180px !important;
+    border: 0;
+    border-radius: 12px;
+    background: #e8f4f7;
+}
+.shc-map-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-shadow: 0.08em 0.08em 0.08em #000000;
+}
+
+/* ---- Footer background on phones ----
+   The bubble artwork is zoomed in on narrow screens, so bubbles (and a stray
+   speck in the image) sat on top of the address text. Use the plain teal instead. */
+@media (max-width: 767px) {
+    div.et_pb_section.et_pb_section_0_tb_footer {
+        background-image: none !important;
+        background-color: #0097b2 !important;
+    }
+}
+@media (max-width: 767px) {
+    .et_pb_text_0_tb_footer, .et_pb_text_2_tb_footer { font-size: 16px; }
+}
