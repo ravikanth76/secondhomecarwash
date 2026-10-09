@@ -915,8 +915,11 @@ document.getElementById('secondhomecarwash-contact-form').addEventListener('subm
     var encodedText = encodeURIComponent(text);
     var whatsappUrl = "https://wa.me/918801939500?text=" + encodedText;
     
-    // Open WhatsApp in a new tab
-    window.open(whatsappUrl, '_blank');
+    // Open WhatsApp in a new tab; if the popup is blocked, open it in this tab instead
+    if (!window.open(whatsappUrl, '_blank')) {
+        window.location.href = whatsappUrl;
+        return;
+    }
     
     // Redirect main window to thank you page
     window.location.href = "/thank-you/";
@@ -1010,7 +1013,7 @@ document.getElementById('secondhomecarwash-contact-form').addEventListener('subm
 						<h2 class="et_pb_module_header">Shine your car everyday & Ride it in style.</h2>
 						
 						<div class="et_pb_header_content_wrapper"><p>Second Home Car Wash is based on subcription model provides our customer with first choice, environmental friendly daily car cleaning services at door step. Currently service to apartments only.</p></div>
-						<a class="et_pb_button et_pb_more_button et_pb_button_one" href="https://wa.me/918801939500?text=Hi%20Second Home Car Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." data-icon="&#x24;" target="_blank" rel="noopener">Book now</a>
+						<a class="et_pb_button et_pb_more_button et_pb_button_one" href="https://wa.me/918801939500?text=Hi%20Second%20Home%20Car%20Wash%2C%20I%27d%20like%20to%20book%20a%20car%20wash%20schedule." data-icon="&#x24;" target="_blank" rel="noopener">Book now</a>
 					</div>
 				</div>
 					
@@ -1604,5 +1607,6 @@ var et_pb_sticky_elements = {};
 </script>
 <!-- End Custom Image Lightbox Component -->
 <script id="shc-trigger-scroll">(function(){var t=document.getElementById('rmp_menu_trigger-2307');if(!t)return;var ly=0;window.addEventListener('scroll',function(){var y=window.scrollY||document.documentElement.scrollTop;if(!t.classList.contains('is-active')){if(y>120&&y>ly+5){t.style.transform='translateY(-120px)';t.style.opacity='0';}else if(y<ly-5||y<=120){t.style.transform='';t.style.opacity='';}}ly=y;},{passive:true});})();</script>
+<script src="/assets/shc-fixes.js" defer></script>
 </body>
 </html>
